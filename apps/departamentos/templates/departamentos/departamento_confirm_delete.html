@@ -3,12 +3,16 @@
 
 {% block main %}
 
+Delete
+
 <form method="POST">
     {% csrf_token %}
 
+    <h1>Voce esta certo que quer deletar o departamento {{ obj }}</h1>
+
     {{ form|bootstrap }}
 
-    <button type="submit">Salvar</button>
+    <button type="submit" class="btn btn-danger">Confirmar</button>
 </form>
 
 {% endblock %}
